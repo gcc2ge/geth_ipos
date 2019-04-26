@@ -16,3 +16,5 @@ ENV bootnodeId=""
 ENV bootnodeIp=""
 
 CMD exec geth --bootnodes "enode://$bootnodeId@$bootnodeIp:30301" --networkid "6660001" --verbosity=4 --rpc --rpcaddr "0.0.0.0" --rpcapi "eth,web3,net,admin,debug,db" --rpccorsdomain "*" --mine --etherbase $address --unlock $address --password ~/.accountpassword
+
+EXPOSE 8545

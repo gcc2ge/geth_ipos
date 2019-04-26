@@ -26,6 +26,8 @@ services:
         privatekey: c6bd26740bc013041ea0abed21d2ff6722d6d1e6fb00fea0126a6b74d31d5ee8 # Please don't do something like this in production, okay?
         password: pass
     container_name: geth-miner-1
+    ports:
+       - 8548:8545
     networks:
       chainnet:
         ipv4_address: 172.25.0.102 # The monitor needs to know this address
@@ -44,6 +46,8 @@ services:
         privatekey: 3eb30ea7236fe01f1efdadad9a2bb29b80b80bdd5b05e9da6b68ef51fe3de18a
         password: word
     container_name: geth-miner-2
+    ports:
+       - 8547:8545
     networks:
       chainnet:
         ipv4_address: 172.25.0.103
@@ -62,6 +66,8 @@ services:
         privatekey: 6cde67e73eee8e0c4838027ebde480e5b1bf0576ea6614f9d279db5e6c8c1421
         password: word
     container_name: geth-miner-3
+    ports:
+       - 8546:8545
     networks:
       chainnet:
         ipv4_address: 172.25.0.104
